@@ -53,3 +53,8 @@ function ejecutarPruebas() {
     
     return { exito, total };
 }
+
+console.log("celsiusAFahrenheit(100) ->", celsiusAFahrenheit(100)); // Debe salir 212
+console.log("fahrenheitACelsius(32) ->", fahrenheitACelsius(32));     // Debe salir 0
+console.log("evaluarContrasena('Abcdefg1') ->", evaluarContrasena("Abcdefg1")); // Debe salir 'fuerte'
+console.log("contarPalabras('hola mundo') ->", contarPalabras("hola mundo")); // Debe salir 2
