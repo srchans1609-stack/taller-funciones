@@ -54,3 +54,13 @@
    * `generarContrasena` utiliza internamente: `numeroAleatorio` y `caracterAleatorio`.
 2. **¿Cuál fue la función más difícil? ¿Por qué?**  
    La función más compleja fue `generarContrasena` (o la gestión del contador y partición de palabras), debido a la lógica necesaria para filtrar adecuadamente los conjuntos de caracteres según las opciones activadas, asegurar los límites numéricos de longitud entre 6 y 30, y evitar bucles infinitos o fallos de índices.
+
+   ## Fase 4: Conecta las herramientas con la página
+
+### Cuestionario de la Fase 4
+1. **¿Por qué el precio vacío no puede tratarse como 0?**  
+   Porque en un contexto comercial, un precio vacío significa que el usuario no ha introducido ningún valor o ha borrado el campo por error; tratarlo como un `0` permitiría calcular operaciones (como aplicar descuentos o sumar IVA a un artículo de coste cero) dando resultados absurdos o ventas falsas de cero euros, cuando en realidad se trata de un dato de entrada erróneo u obligatorio que debe bloquear el proceso y mostrar una advertencia.
+2. **Apunta tres funciones predefinidas que has usado en esta fase y para qué.**  
+   * `isNaN()`: Para verificar si un valor introducido en los inputs de texto no es un número válido.  
+   * `document.getElementById()`: Para seleccionar y acceder a los elementos del DOM y sus valores en la interfaz web.  
+   * `parseFloat()` o `parseInt()`: Para transformar las cadenas de texto obtenidas de los inputs HTML en datos numéricos operativos.

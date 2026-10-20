@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Funciones - DAW</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Taller de Funciones - Desarrollo Web en Entorno Cliente</h1>
+
+    <!--  IVA y Descuentos -->
+    <section>
+        <h2>1. IVA y Descuentos</h2>
+        <label>Precio (€): <input type="text" id="precioIVA"></label>
+        <label>Tipo IVA (%): <input type="text" id="tipoIVA" placeholder="Por defecto 21"></label>
+        <button id="btnIVA">Calcular IVA y Total</button>
+        <div id="resultadoIVA" class="resultado"></div>
+    </section>
+
+    <!--  Conversor de Temperaturas -->
+    <section>
+        <h2>2. Conversor de Temperaturas</h2>
+        <label>Valor: <input type="text" id="tempValor"></label>
+        <label>De: 
+            <select id="tempDe">
+                <option value="C">Celsius (°C)</option>
+                <option value="F">Fahrenheit (°F)</option>
+            </select>
+        </label>
+        <label>A: 
+            <select id="tempA">
+                <option value="F">Fahrenheit (°F)</option>
+                <option value="C">Celsius (°C)</option>
+            </select>
+        </label>
+        <button id="btnTemp">Convertir</button>
+        <div id="resultadoTemp" class="resultado"></div>
+    </section>
+
+    <!--  Validador de Contraseñas -->
+    <section>
+        <h2>3. Validador de Contraseñas</h2>
+        <label>Contraseña: <input type="password" id="passValor"></label>
+        <button id="btnPass">Evaluar Seguridad</button>
+        <div id="resultadoPass" class="resultado"></div>
+    </section>
+
+    <!--  Generador de Contraseñas -->
+    <section>
+        <h2>4. Generador de Contraseñas</h2>
+        <label>Longitud (6-30): <input type="text" id="genLongitud" value="12"></label>
+        <button id="btnGen">Generar Contraseña</button>
+        <div id="resultadoGen" class="resultado"></div>
+    </section>
+
+    <!--  Contador de Palabras -->
+    <section>
+        <h2>5. Contador de Palabras y Lectura</h2>
+        <textarea id="textoContador" placeholder="Escribe tu texto aquí..."></textarea>
+        <button id="btnContador">Analizar Texto</button>
+        <div id="resultadoContador" class="resultado"></div>
+    </section>
+
+  
+    <script src="funciones.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

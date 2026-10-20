@@ -276,3 +276,15 @@ function minutosLectura(texto, ppm = 200) {
     // Math.ceil redondea siempre hacia arriba
     return Math.ceil(totalPalabras / ppm);
 }
+
+/**
+ * Comprueba si un texto es un número válido.
+ * @param {string} texto - Texto introducido
+ * @returns {boolean}
+ */
+function esNumeroValido(texto) {
+    if (texto === "" || texto === null || isNaN(texto)) {
+        return false;
+    }
+    return true;
+}
