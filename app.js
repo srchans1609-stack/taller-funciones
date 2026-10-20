@@ -113,6 +113,29 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>Palabra más larga: <strong>${palabraLarga || "Ninguna"}</strong></p>
             <p>Tiempo estimado de lectura: <strong>${minLectura} min(s)</strong></p>
         `;
+        // ---  MANEJADOR DE PRUEBAS AUTOMATIZADAS ---
+    let btnPruebas = document.getElementById("btnEjecutarPruebas");
+    if (btnPruebas) {
+        btnPruebas.addEventListener("click", () => {
+            let contenedorDiv = document.getElementById("resultadoPruebas");
+            contenedorDiv.innerHTML = "<p>Ejecutando pruebas en la consola y validando...</p>";
+            
+            // Llamamos a la función de pruebas definida en pruebas.js
+            let resultado = ejecutarPruebas();
+
+            if (resultado.exito === resultado.total) {
+                contenedorDiv.innerHTML = `
+                    <p style='color:green; font-weight:bold;'>¡Todas las pruebas han pasado con éxito!</p>
+                    <p>Resultado: <strong>${resultado.exito} / ${resultado.total}</strong> pruebas correctas.</p>
+                `;
+            } else {
+                contenedorDiv.innerHTML = `
+                    <p style='color:red; font-weight:bold;'>¡Atención! Hay pruebas que han fallado.</p>
+                    <p>Superadas: <strong>${resultado.exito}</strong> de <strong>${resultado.total}</strong>. Revisa la consola (F12) para ver los detalles.</p>
+                `;
+            }
+        });
+    }
     });
 
 });

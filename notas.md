@@ -64,3 +64,11 @@
    * `isNaN()`: Para verificar si un valor introducido en los inputs de texto no es un número válido.  
    * `document.getElementById()`: Para seleccionar y acceder a los elementos del DOM y sus valores en la interfaz web.  
    * `parseFloat()` o `parseInt()`: Para transformar las cadenas de texto obtenidas de los inputs HTML en datos numéricos operativos.
+
+   ## Fase 5: Pruebas automatizadas
+
+### Cuestionario de la Fase 5
+1. **¿Qué fallo introdujiste y qué prueba lo detectó?**  
+   Se introdujo un fallo modificando a propósito el porcentaje de cálculo en `calcularIVA` (multiplicando por un valor incorrecto). La prueba automatizada correspondiente (`calcularIVA(100, 21)` comparado con el esperado `21`) lanzó un error mediante `console.assert`, marcando el fallo en rojo en la consola.
+2. **¿Por qué no sirve una prueba que siempre pasa?**  
+   Una prueba que siempre da por bueno el resultado (`true` incondicional) carece de utilidad lógica, ya que no comprueba la veracidad del código ni valida si los algoritmos devuelven el resultado matemático o funcional correcto. El objetivo de las pruebas es detectar fallos ante cambios o errores de programación, algo que una prueba estática e invariable es incapaz de hacer.
