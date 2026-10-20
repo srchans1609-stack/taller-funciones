@@ -72,3 +72,10 @@
    Se introdujo un fallo modificando a propósito el porcentaje de cálculo en `calcularIVA` (multiplicando por un valor incorrecto). La prueba automatizada correspondiente (`calcularIVA(100, 21)` comparado con el esperado `21`) lanzó un error mediante `console.assert`, marcando el fallo en rojo en la consola.
 2. **¿Por qué no sirve una prueba que siempre pasa?**  
    Una prueba que siempre da por bueno el resultado (`true` incondicional) carece de utilidad lógica, ya que no comprueba la veracidad del código ni valida si los algoritmos devuelven el resultado matemático o funcional correcto. El objetivo de las pruebas es detectar fallos ante cambios o errores de programación, algo que una prueba estática e invariable es incapaz de hacer.
+   
+   ## Fase 6: Documentación y revisión final
+
+### Incidencias y resolución de errores
+* **Error encontrado:** Durante la validación de los campos de texto en el contador de palabras y las contraseñas, se produjeron fallos al procesar cadenas vacías o espacios en blanco múltiples.
+* **Herramienta utilizada:** Se emplearon mensajes personalizados de depuración con `console.log` para seguir el rastro de los arrays generados por el método `.split(/\s+/)`, además de la consola de errores nativa de las Developer Tools de Chrome.
+* **Solución aplicada:** Se añadió una condición previa de control de cadenas vacías (`texto.trim() === ""`) y se optimizó la función auxiliar de validación numérica (`esNumeroValido`) para capturar correctamente los valores nulos o vacíos antes de ejecutar los cálculos.
