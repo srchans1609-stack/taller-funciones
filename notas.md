@@ -45,3 +45,12 @@
 * **Matemáticas:** `Math.round`, operaciones aritméticas y métodos numéricos como `toFixed`
 * **Texto (Strings):** `replace`, `split`
 * **Funciones adicionales conocidas:** `parseFloat`, `Math.max`, `String.trim`
+
+## Fase 3: Funciones pequeñas
+
+### Cuestionario de la Fase 3
+1. **¿Qué funciones usa `evaluarContrasena`? ¿Y `generarContrasena`?**  
+   * `evaluarContrasena` utiliza internamente: `longitudSuficiente`, `tieneMayuscula`, `tieneMinuscula` y `tieneNumero`.  
+   * `generarContrasena` utiliza internamente: `numeroAleatorio` y `caracterAleatorio`.
+2. **¿Cuál fue la función más difícil? ¿Por qué?**  
+   La función más compleja fue `generarContrasena` (o la gestión del contador y partición de palabras), debido a la lógica necesaria para filtrar adecuadamente los conjuntos de caracteres según las opciones activadas, asegurar los límites numéricos de longitud entre 6 y 30, y evitar bucles infinitos o fallos de índices.
