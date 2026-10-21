@@ -1,8 +1,8 @@
 /**
  * Comprueba si el valor obtenido coincide con el esperado.
- * param {string} descripcion - Descripción de la prueba
- * param {*} obtenido - Resultado real obtenido de la función
- * param {*} esperado - Resultado que se esperaba obtener
+ * @param {string} descripcion - Descripción de la prueba
+ * @param {*} obtenido - Resultado real obtenido de la función
+ * @param {*} esperado - Resultado que se esperaba obtener
  * returns {boolean} true si pasa la prueba, false si falla
  */
 function probar(descripcion, obtenido, esperado) {
@@ -13,7 +13,7 @@ function probar(descripcion, obtenido, esperado) {
 
 /**
  * Ejecuta el conjunto completo de pruebas para todas las herramientas.
- * returns {Object} Resumen con el total de pruebas y las superadas con éxito.
+ * @returns {Object} Resumen con el total de pruebas y las superadas con éxito.
  */
 function ejecutarPruebas() {
     let exito = 0;
